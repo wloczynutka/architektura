@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "myclabs/php-enum": "^1.6",
+        "kint-php/kint": "^2.2"
+    }
+}
