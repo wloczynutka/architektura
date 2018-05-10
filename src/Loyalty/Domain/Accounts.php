@@ -1,9 +1,10 @@
 <?php
 
-namespace Loyality\Domain;
+namespace Loyalty\Domain;
 
 interface Accounts
 {
-    public function save(Account $account): void;
     public function load(string $id): Account;
+
+    public function save(Account $account): void;
 }

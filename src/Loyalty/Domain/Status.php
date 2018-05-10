@@ -1,6 +1,6 @@
 <?php
 
-namespace Loyality\Domain;
+namespace Loyalty\Domain;
 
 use MyCLabs\Enum\Enum;
 

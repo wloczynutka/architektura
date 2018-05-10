@@ -1,9 +1,9 @@
 <?php
 
-namespace Loyality\Infrastructure;
+namespace Loyalty\Infrastructure;
 
-use Loyality\Domain\Account;
-use Loyality\Domain\Accounts;
+use Loyalty\Domain\Account;
+use Loyalty\Domain\Accounts;
 
 class InMemory implements Accounts
 {
@@ -11,7 +11,8 @@ class InMemory implements Accounts
 
     public function load(string $id): Account
     {
-        // @TODO: Implement load() method.
+        // @todo Fix me :)
+
         return $this->accounts[$id];
     }
 

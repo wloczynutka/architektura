@@ -1,13 +1,14 @@
 <?php
 
-namespace Loyality\Domain;
-
+namespace Loyalty\Domain;
 
 interface PointsCalculation
 {
     /**
+     * INT JEST UPROSZCZENIEM!
+     *
      * @param int $price
-     * @return int
+     * @return mixed
      */
     public function calculate(int $price): int;
 }

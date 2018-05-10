@@ -1,20 +1,25 @@
 <?php
 
-namespace Loyality\Domain\Event;
+namespace Loyalty\Domain\Event;
 
 class PointsAdded extends Event
 {
     /**
-     * @var int
+     * @var string
      */
     private $accountId;
 
     /**
-     * @var string
+     * @var int
      */
     private $points;
 
-    public function __construct(string $accountId, string $points)
+    /**
+     * PointsAdded constructor.
+     * @param string $accountId
+     * @param int $points
+     */
+    public function __construct(string $accountId, int $points)
     {
         $this->accountId = $accountId;
         $this->points = $points;
@@ -23,17 +28,16 @@ class PointsAdded extends Event
     /**
      * @return string
      */
-    public function getAccountId()
+    public function getAccountId(): string
     {
         return $this->accountId;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getPoints()
+    public function getPoints(): int
     {
         return $this->points;
     }
-
 }

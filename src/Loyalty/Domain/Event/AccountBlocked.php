@@ -1,42 +1,41 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrzej
- * Date: 09.05.2018
- * Time: 12:46
- */
 
-namespace Loyality\Domain\Event;
-
+namespace Loyalty\Domain\Event;
 
 class AccountBlocked extends Event
 {
     /**
-     * @var int
+     * @var string
      */
     private $accountId;
 
     /**
-     * @var string
+     * @var
      */
     private $reason;
 
-    public function __construct(string $accountId, string $reason)
+    /**
+     * AccountBlocked constructor.
+     * @param string $accountId
+     * @param $reason
+     */
+    public function __construct(string $accountId, $reason)
     {
         $this->accountId = $accountId;
         $this->reason = $reason;
     }
 
+
     /**
      * @return string
      */
-    public function getAccountId()
+    public function getAccountId(): string
     {
         return $this->accountId;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getReason()
     {

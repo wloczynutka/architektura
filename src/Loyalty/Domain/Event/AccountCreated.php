@@ -1,22 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrzej
- * Date: 09.05.2018
- * Time: 12:46
- */
 
-namespace Loyality\Domain\Event;
-
+namespace Loyalty\Domain\Event;
 
 class AccountCreated extends Event
 {
-
     /**
-     * @var int
+     * @var string
      */
     private $accountId;
 
+    /**
+     * AccountCreated constructor.
+     * @param string $accountId
+     */
     public function __construct(string $accountId)
     {
         $this->accountId = $accountId;
@@ -25,9 +21,8 @@ class AccountCreated extends Event
     /**
      * @return string
      */
-    public function getAccountId()
+    public function getAccountId(): string
     {
         return $this->accountId;
     }
-
 }

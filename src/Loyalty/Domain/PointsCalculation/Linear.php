@@ -1,8 +1,8 @@
 <?php
 
-namespace Loyality\Domain\PointsCalculation;
+namespace Loyalty\Domain\PointsCalculation;
 
-use Loyality\Domain\PointsCalculation;
+use Loyalty\Domain\PointsCalculation;
 
 class Linear implements PointsCalculation
 {
@@ -11,6 +11,10 @@ class Linear implements PointsCalculation
      */
     private $ratio;
 
+    /**
+     * Linear constructor.
+     * @param float $ratio
+     */
     public function __construct(float $ratio)
     {
         $this->ratio = $ratio;
@@ -18,6 +22,6 @@ class Linear implements PointsCalculation
 
     public function calculate(int $price): int
     {
-        return (int) round($price + $this->ratio);
+        return (int)round($price * $this->ratio);
     }
 }
